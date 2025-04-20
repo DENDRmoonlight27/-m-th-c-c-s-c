@@ -1,1 +1,288 @@
-# -m-th-c-c-s-c
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ẩm Thực Đặc Sắc</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto:wght@400;700&display=swap');
+
+    :root {
+      --main-color: #5c3a1e; /* nâu đậm */
+      --highlight-color: #DA7B45;
+      --bg-color: #f8f3ef;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: var(--bg-color);
+      color: #333;
+      font-size: 17px;
+    }
+
+    header {
+      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), 
+        url('https://mia.vn/media/uploads/blog-du-lich/pho-co-hoi-an-4-1722851828.jpg') 
+        no-repeat center/cover;
+      height: 220px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+    }
+
+    header h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 4.2rem;
+      margin: 0;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    .logo-img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      margin-right: 14px;
+      vertical-align: middle;
+    }
+
+    nav {
+      background-color: var(--main-color);
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 40px;
+      flex-wrap: wrap;
+      font-size: 1.05rem;
+    }
+
+    .links a {
+      color: white;
+      text-decoration: none;
+      margin: 0 12px;
+      font-weight: bold;
+    }
+
+    .links a:hover {
+      color: #fff9d9;
+    }
+
+    .search-box input {
+      padding: 8px 12px;
+      border: none;
+      border-radius: 4px;
+      outline: none;
+      font-size: 1rem;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+    }
+
+    .region {
+      background: #fff7f0;
+      border-radius: 16px;
+      border: 3px solid var(--main-color);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+      overflow: hidden;
+    }
+
+    .region h2 {
+      background-color: var(--main-color);
+      color: white;
+      padding: 16px;
+      margin: 0;
+      text-align: center;
+      font-size: 1.6rem;
+    }
+
+    .region ul {
+      list-style: none;
+      padding: 20px;
+      margin: 0;
+      display: flex;
+      flex-wrap: nowrap;
+      gap: 20px;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+    }
+
+    .region ul::-webkit-scrollbar {
+      height: 8px;
+    }
+    .region ul::-webkit-scrollbar-thumb {
+      background-color: #8B5E3C;
+      border-radius: 10px;
+    }
+    .region ul::-webkit-scrollbar-track {
+      background-color: #f5e9dc;
+    }
+
+    li {
+      min-width: 48%;
+      background-color: #faf6f2;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+      transition: transform 0.3s;
+    }
+
+    li:hover {
+      transform: translateY(-6px);
+    }
+
+    li img {
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+      border-bottom: 2px solid #eee;
+    }
+
+    li p {
+      text-align: center;
+      margin: 10px 0;
+      font-weight: 600;
+      font-size: 1.1rem;
+      color: var(--main-color);
+    }
+
+    footer {
+      background-color: var(--main-color);
+      color: white;
+      padding: 22px;
+      text-align: center;
+      font-size: 1.05rem;
+    }
+
+    footer a {
+      color: #ffd699;
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        grid-template-columns: 1fr;
+      }
+
+      .region ul {
+        flex-direction: row;
+      }
+
+      li {
+        min-width: 80%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>
+     <img src="logo_circular.jpg" alt="Logo ADC" class="logo-img">
+      Ẩm Thực Đặc Sắc
+    </h1>
+  </header>
+
+  <nav>
+    <div class="links">
+      <a href="trangchu.html">Trang chủ</a>
+      <a href="gioithieu.html">Giới thiệu</a>
+      <a href="sanpham.html">Sản phẩm</a>
+      <a href="chinhsach.html">Chính sách</a>
+      <a href="lienhe.html">Liên hệ</a>
+      <a href="dangki.html" >Đăng ký</a>
+      <a href="dangnhap.html" >Đăng nhập</a>
+    </div>
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="Tìm món ăn...">
+    </div>
+  </nav>
+
+  <div class="container" id="mainContent">
+    <!-- MIỀN BẮC -->
+    <div class="region">
+      <h2>Miền Bắc</h2>
+      <ul>
+        <li>
+          <a href="pho-hanoi.html"><img src="https://cdn-i.vtcnews.vn/resize/th/upload/2023/04/21/7-quan-pho-ngon-nuc-tieng-duoc-long-nguoi-sanh-an-trong-khu-pho-co-ha-noi-1-1632824891-23553249.jpg" alt="Phở Hà Nội"><p>Phở Hà Nội</p></a>
+        </li>
+        <li>
+          <a href="banh-da-cua-haiphong.html"><img src="https://bepxua.vn/wp-content/uploads/2021/05/banh-da-cua-hai-phong.jpg" alt="Bánh đa cua"><p>Bánh đa cua</p></a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- MIỀN TRUNG -->
+    <div class="region">
+      <h2>Miền Trung</h2>
+      <ul>
+        <li>
+          <a href="bun-bo-hue.html"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTS_zrsVZcHCfK-3_n78Z7BGR2EPVgklxQrIw&s" alt="Bún bò Huế"><p>Bún bò Huế</p></a>
+        </li>
+        <li>
+          <a href="cao-lau-hoian.html"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/BANH_DA_CUA_1.jpg/640px-BANH_DA_CUA_1.jpg" alt="Cao lầu"><p>Cao lầu Hội An</p></a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- MIỀN NAM -->
+    <div class="region">
+      <h2>Miền Nam</h2>
+      <ul>
+        <li>
+          <a href="pha-lau.html"><img src="https://cdn-media.sforum.vn/storage/app/media/wp-content/uploads/2023/12/cach-lam-pha-lau-thumbnail.jpg" alt="Phá lấu"><p>Phá lấu</p></a>
+        </li>
+        <li>
+          <a href="com-tam.html"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYn4DxXBYgCK2gw3udITmaTchjtRcVil1_og&s" alt="Cơm tấm"><p>Cơm tấm</p></a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- MIỀN TÂY -->
+    <div class="region">
+      <h2>Miền Tây</h2>
+      <ul>
+        <li>
+          <a href="banh-pia.html"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSy7Mcl59a78Va2H16X8JsrQ1tn2H4-KS6QLg&s" alt="Bánh pía"><p>Bánh pía</p></a>
+        </li>
+        <li>
+          <a href="hu-tieu.html"><img src="https://vcdn1-dulich.vnecdn.net/2016/05/23/1-6532-1464000261.jpg?w=460&h=0&q=100&dpr=2&fit=crop&s=gGqpETsMrmYH70sbgx-I0Q" alt="Hủ tiếu"><p>Hủ tiếu Mỹ Tho</p></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; Ẩm Thực Đặc Sắc | Email: amthucdacsac2025@gmail.com</p>
+    <p>Fanpage: facebook.com/newfanpage</p>
+    <p>Địa chỉ: 08 Lê Duẩn - P. Nghĩa Tân - TP. Gia Nghĩa - Tỉnh Đăk Nông (<a href="https://www.google.com/maps?q=08+Lê+Duẩn,+P.+Nghĩa+Tân,+Gia+Nghĩa,+Đắk+Nông" target="_blank">tại đây</a>) | SĐT: 0917029376</p>
+  </footer>
+
+  <script>
+    const input = document.getElementById("searchInput");
+    input.addEventListener("keyup", function () {
+      const keyword = this.value.toLowerCase();
+      const regions = document.querySelectorAll(".region");
+      regions.forEach(region => {
+        const match = region.innerText.toLowerCase().includes(keyword);
+        region.style.display = match ? "block" : "none";
+      });
+      if (keyword === "") regions.forEach(r => r.style.display = "block");
+    });
+  </script>
+
+</body>
+</html>
