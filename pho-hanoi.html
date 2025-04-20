@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto:wght@400;700&display=swap');
+
+    :root {
+      --main-color: #5c3a1e; /* nâu đậm */
+      --highlight-color: #DA7B45;
+      --bg-color: #f8f3ef;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0.8%;
+      background-color: var(--bg-color);
+      color: #333;
+      font-size: 17px;
+	  line-height: 1.8;
+    }
+	
+
+    header {
+      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), 
+        url('https://mia.vn/media/uploads/blog-du-lich/pho-co-hoi-an-4-1722851828.jpg') 
+        no-repeat center/cover;
+      height: 220px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+    }
+
+    header h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 4.2rem;
+      margin: 0;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+    }
+	
+	.logo-img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      margin-right: 14px;
+      vertical-align: middle;
+    }
+	
+    nav {
+      background-color: var(--main-color);
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 40px;
+      flex-wrap: wrap;
+      font-size: 1.05rem;
+    }
+	
+	.logo {
+      display: none;
+    }
+
+    .links a {
+      color: white;
+      text-decoration: none;
+      margin: 0 12px;
+      font-weight: bold;
+    }
+
+    .links a:hover {
+      color: #fff9d9;
+    }
+
+    .search-box input {
+      padding: 8px 12px;
+      border: none;
+      border-radius: 4px;
+      outline: none;
+      font-size: 1rem;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+    }
+	
+	.block {
+            flex: 1; /* Các khối div có kích thước bằng nhau */
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 10px;
+            background-color: #f9f9f9;
+        }
+
+    .region {
+      background: #fff7f0;
+      border-radius: 16px;
+      border: 3px solid var(--main-color);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+      overflow: hidden;
+    }
+
+    .region h2 {
+      background-color: var(--main-color);
+      color: white;
+      padding: 16px;
+      margin: 0;
+      text-align: center;
+      font-size: 1.6rem;
+    }
+	
+	footer {
+      background-color: var(--main-color);
+      color: white;
+      padding: 22px;
+      text-align: center;
+      font-size: 1.05rem;
+    }
+	
+	footer p {
+      background-color: var(--main-color);
+      color: white;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      font-size: 1.05rem;
+    }
+	
+	   footer a {
+      color: #ffd699;
+      text-decoration: underline;
+    }
+
+@media (max-width: 768px) {
+      .container {
+        grid-template-columns: 1fr;
+      }
+
+      .logo {
+        justify-content: center;
+        margin-bottom: 10px;
+      }
+
+      .region ul {
+        flex-direction: row;
+      }
+
+      li {
+        min-width: 80%;
+      }
+    }
+
+
+
+        header {
+            position: relative;
+            height: 200px; /* Tăng chiều cao để làm nổi bật hơn */
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), 
+                        url('https://hocmonviet.edu.vn/wp-content/uploads/2017/03/hoc-mon-viet-kham-pha-am-thuc-viet-vietnamese-cooking-1-818x390.jpg') 
+                        no-repeat center center/cover;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        header h1 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 4rem; /* Tăng kích thước chữ */
+            color: #fff;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7); /* Hiệu ứng bóng chữ */
+            z-index: 2;
+            text-align: center;
+        }
+
+h1 {
+  color: #D2691E;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 50em;
+  font-family: 'Palatino Linotype', serif;
+}
+
+h2 {
+  color: var(--main-color);
+  margin-top: 30px;
+  font-size: 4em;
+  font-family: 'Palatino Linotype', serif;
+}
+
+img.center {
+  display: block;
+  margin: 20px auto;
+  border-radius: 10px;
+  max-width: 100%;
+}
+
+p {
+  font-size: 25px;
+  color: #333333;
+  text-align: justify;
+  margin: 15px 0;
+  font-family: 'Palatino Linotype', serif;
+  text-indent: 5%;
+}
+
+table {
+  width: 100%;
+  margin-top: 20px;
+  border-spacing: 15px;
+  text-align: center
+}
+
+td {
+  vertical-align: top;
+  text-align: justify;
+  padding: 10px;
+}
+
+iframe {
+  display: block;
+  margin: 20px auto;
+  border: none;
+  max-width: 90%;
+  height: 450px;
+}
+
+ol {
+  margin-left: 25px;
+}
+
+ul {
+  margin-left: 25px;
+  list-style-type: disc;
+}
+
+.image-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.image-gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.large-image {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+
+.small-image {
+  width: 100%;
+  height: auto;
+}
+
+.enlarged-image {
+  width: 100%;
+  height: auto;
+  max-width: 140%;
+}
+
+/* Tăng cỡ chữ ở phần "Cách chế biến phở Hà Nội" */
+section.recipe p {
+  font-size: 20px;
+  font-family: 'Palatino Linotype', serif;
+}
+li {
+            font-size: 25px;
+			font-family: 'Palatino Linotype', serif
+        }
+
+.backToTop { position: fixed; 
+				display: none; 
+				background-color: #007BFF;  
+				border: none;  
+				border-radius: 5px; 
+				cursor: pointer;
+				background: #eee;
+
+color: #102039;
+
+bottom: 0;
+
+right: 15px;
+
+padding: 14px 15px;
+
+line-height: 1;
+
+display: none;
+				}
+
+       
+        .comment-section {
+            width: 50%;
+            margin: 20px auto;
+        }
+        .comment-box {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .submit-btn {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .submit-btn:hover {
+            background-color: #0056b3;
+        }
+        .comments-list {
+            margin-top: 20px;
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .comment-item {
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0;
+        }
+        .comment-item:last-child {
+            border-bottom: none;
+        }
+		
+		
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+		button {
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+		
+		.block1 {
+            flex: 1; /* Các khối div có kích thước bằng nhau */
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 150px;
+            background-color: #f9f9f9;
+        }
+		
+</style>
+</head>
+<body>
+<header>
+<h1>
+     <img src="logo_circular.jpg" alt="Logo ADC" class="logo-img" width="100"></h1>
+     <h1>Phở Hà Nội</h1>
+</header>
+<nav>
+    <div class="links">
+      <a href="trangchu.html">Trang chủ</a>
+      <a href="gioithieu.html">Giới thiệu</a>
+      <a href="sanpham.html">Sản phẩm</a>
+      <a href="chinhsach.html">Chính sách</a>
+      <a href="lienhe.html">Liên hệ</a>
+      <a href="dangki.html" >Đăng ký</a>
+      <a href="dangnhap.html" >Đăng nhập</a>
+    </div>
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="Tìm món ăn...">
+    </div>
+  </nav>	
+<center><h2>Phở Hà Nội</h2></center>
+<ul>
+<img src="https://cdn-i.vtcnews.vn/resize/th/upload/2023/04/21/7-quan-pho-ngon-nuc-tieng-duoc-long-nguoi-sanh-an-trong-khu-pho-co-ha-noi-1-1632824891-23553249.jpg" alt="Phở" class="center">
+<li>Phở Hà Nội là một trong những món ăn đặc trưng của ẩm thực Việt Nam, đặc biệt là ở thủ đô Hà Nội. Món phở này không chỉ nổi tiếng trong nước mà còn được thế giới biết đến như một biểu tượng ẩm thực Việt.</li>
+
+
+<center><h2>Lịch sử ra đời của phở Hà Nội</h2></center>
+
+<div class="container">
+        <div class="block" id="block1">
+		<p>Phở Hà Nội có nguồn gốc từ những năm đầu thế kỷ 20, xuất hiện trong bối cảnh Hà Nội đang chịu ảnh hưởng của văn hóa Pháp và Trung Quốc. Có nhiều giả thuyết về nguồn gốc của phở, nhưng phần lớn đều cho rằng phở được tạo ra từ sự kết hợp giữa các món súp từ Trung Quốc, như món "phở" (hủ tiếu) và các món ăn của người Pháp.</p>
+<p>Một giả thuyết phổ biến là phở ra đời vào khoảng những năm 1910 - 1920 tại Hà Nội. Một số nguồn cho rằng phở được sáng tạo bởi những người bán hàng rong, họ sử dụng thịt bò hoặc thịt gà cùng với nước dùng nấu từ xương để tạo ra một món ăn ngon và bổ dưỡng, nhanh chóng trở thành món ăn yêu thích của người dân Hà Nội. Ban đầu, phở chủ yếu được bán vào buổi sáng, trở thành món ăn sáng phổ biến.</p>
+		</div>
+        <div class="block" id="block2">
+		<center><img src="https://i.ytimg.com/vi/HJOXAtJC4ZI/hqdefault.jpg" alt="Lịch sử Phở" width="400"></center>
+		<center><img src="https://media.techz.vn/media2019/upload2019/2023/09/17/thumb_17092023121114.jpg" alt="Lịch sử Phở" width="400"></center>
+		</div>
+    </div>
+
+<center><h2>Nơi bán phở Hà Nội</h2></center>
+
+<div class="container">
+        <div class="block" id="block1">
+		<p>Phở Hà Nội nổi tiếng và có mặt ở khắp mọi nơi trên các phố phường thủ đô. Những con phố như Phở Lý Quốc Sư, Phở Gia Truyền Bát Đàn, hay Phở Thìn đều nổi tiếng với những tiệm phở lâu đời. Ngoài ra, nhiều quán phở trên các con phố như Đinh Liệt, Hàng Trống, Hàng Cân cũng được biết đến với những bát phở ngon, đậm đà, mang đậm phong cách Hà Nội.</p>
+<p>Bên cạnh các quán phở truyền thống, nhiều quán phở hiện đại cũng phát triển theo các xu hướng mới như phở chay, phở gà, hay phở với nhiều biến tấu đặc biệt.</p>
+		</div>
+        <div class="block" id="block2">
+		<center><img src="https://cdn.pastaxi-manager.onepas.vn/content/uploads/articles/lanmkt/phohanoi/pho-ha-noi-pho-thin.jpg" alt="Nơi bán Phở" width="500"><center></div>
+    </div>
+
+<center><h2>Cách chế biến phở Hà Nội</h2></center>
+<section class="recipe">
+<iframe width="700" src="https://www.youtube.com/embed/c9GfHgMk1ac?si=-FbaI0g9SDgIZrCu" title="YouTube video player" allowfullscreen></iframe>
+
+
+<li>Phở Hà Nội có hai loại chính là phở bò và phở gà, nhưng nổi bật nhất vẫn là phở bò. Dưới đây là cách chế biến cơ bản của phở bò Hà Nội:</li>
+<tr>
+<td>
+<ol>
+<li><b>Chuẩn bị nguyên liệu:</b>
+
+<div class="container">
+        <div class="block" id="block1">
+	<ul>	
+<li>Thịt bò: Thịt bò phở có thể là bắp, gầu, hoặc nạm. Thịt được thái mỏng và thường được chần qua nước sôi.</li>
+<li>Xương bò: Xương bò được dùng để nấu nước dùng, là phần quan trọng nhất để tạo nên vị ngọt đặc trưng của phở.</li>
+<li>Gia vị: Bao gồm gừng, hành khô, quế, hồi, tiêu, và các gia vị khác để tạo hương vị đặc trưng cho nước dùng.</li>
+</ul>
+</div>
+        <div class="block" id="block2"><center><img src="https://mia.vn/media/uploads/blog-du-lich/top-19-quan-pho-ha-noi-ngon-nuc-tieng-an-la-ghien-phan-1--1639124992.jpg" alt="Nguyên liệu" class="small-image"></center></div>
+    </div>
+</li>
+<li><b>Nấu nước dùng:</b>
+
+<div class="container">
+        <div class="block" id="block1">
+		<ul>
+<li>Xương bò được ninh trong nhiều giờ để lấy nước ngọt. Gừng và hành được nướng lên để khử mùi và tạo hương thơm. Nước dùng phải được ninh lâu để có vị ngọt tự nhiên từ xương.</li>
+<li>Gia vị như quế, hồi, và các loại gia vị khác được cho vào túi vải và thả vào nồi nước dùng để tạo hương thơm đặc trưng.</li>
+</ul></div>
+        <div class="block" id="block2"><img src="https://mayviendong.vn/wp-content/uploads/2022/10/kel-8917-0.jpg" alt="Nấu nước dùng" width="500"></div>
+    </div>
+
+</li>
+<li><b>Chế biến phở:</b>
+
+<div class="container">
+        <div class="block" id="block1"><ul>
+<li>Bánh phở (sợi phở) được trụng qua nước sôi để làm nóng và mềm.</li>
+<li>Thịt bò được thái mỏng, sau đó cho vào tô, chan nước dùng sôi lên, và rắc thêm hành lá, rau thơm (ngò gai, húng quế, mùi tàu) để tăng thêm hương vị.</li>
+<li>Món phở thường được ăn kèm với các loại gia vị như tương ớt, chanh, và giá đỗ để tăng thêm độ ngon miệng.</li>
+</ul></div>
+        <div class="block" id="block2"><center><img src="https://mia.vn/media/uploads/blog-du-lich/top-19-quan-pho-ha-noi-ngon-nuc-tieng-an-la-ghien-phan-1-05-1639125006.png" alt="Chế biến phở" width="500" height="400"></center></div>
+    </div>
+
+</li>
+<li><b>Cách thưởng thức:</b>
+
+<div class="container">
+        <div class="block" id="block1"><ul>
+<li>Phở Hà Nội có cách ăn khá đơn giản và thanh tao, người ăn thường ăn kèm với giá đỗ, rau thơm, và thêm gia vị tùy theo khẩu vị.</li>
+</ul></div>
+        <div class="block" id="block2"><center><image src="https://phothin1955.vn/sites/default/files/inline-images/po-tai-chin-dang-bai.jpg" alt="Phở" height="300" width="500"></div>
+    </div>
+
+
+
+</li>
+</ol>
+</td>
+</tr>
+</section>
+<li>Tóm lại, Phở Hà Nội là một món ăn dễ ăn nhưng cũng rất cầu kỳ trong cách chế biến. Chính vì thế, mỗi quán phở lại có những bí quyết riêng để tạo ra hương vị đặc trưng, và món phở của Hà Nội luôn có một sự hấp dẫn riêng biệt</li></ul>
+<br>
+<br>
+<button id="backToTop" onclick="scrollToTop()">Back to Top</button> <!-- JavaScript cho nút Back to Top --> 
+<script> // Hiển thị nút khi cuộn xuống 100px từ đầu trang 
+window.onscroll = function() {
+ var backToTopButton = document.getElementById("backToTop"); 
+ if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) { 
+ backToTopButton.style.display = "block"; } else { 
+ backToTopButton.style.display = "none"; } }; // Hàm cuộn lên đầu trang 
+ function scrollToTop() { 
+		document.body.scrollTop = 0; 
+		document.documentElement.scrollTop = 0; 
+		} 
+</script>
+
+<div class="comment-section">
+        <h2>Phần Bình Luận</h2>
+        <textarea id="commentBox" class="comment-box" placeholder="Nhập bình luận của bạn..."></textarea>
+        <button id="submitBtn" class="submit-btn">Gửi</button>
+        <div class="comments-list" id="commentsList">
+            <h3>Bình luận:</h3>
+        </div>
+    </div>
+
+    <script>
+        const commentBox = document.getElementById('commentBox');
+        const submitBtn = document.getElementById('submitBtn');
+        const commentsList = document.getElementById('commentsList');
+
+        // Thêm bình luận mới vào danh sách
+        submitBtn.addEventListener('click', () => {
+            const comment = commentBox.value.trim(); // Loại bỏ khoảng trắng thừa
+            if (comment) {
+                const newComment = document.createElement('div');
+                newComment.className = 'comment-item';
+                newComment.textContent = comment;
+                commentsList.appendChild(newComment); // Thêm bình luận vào danh sách
+                commentBox.value = ''; // Xóa nội dung trong ô nhập
+            } else {
+                alert('Vui lòng nhập bình luận trước khi gửi!');
+            }
+        });
+    </script>
+<footer>
+    <p>&copy; Ẩm Thực Đặc Sắc | Email: amthucdacsac2025@gmail.com</p>
+    <p>Fanpage: facebook.com/newfanpage</p>
+    <p>Địa chỉ: 08 Lê Duẩn - P. Nghĩa Tân - TP. Gia Nghĩa - Tỉnh Đăk Nông (<a href="https://www.google.com/maps?q=08+Lê+Duẩn,+P.+Nghĩa+Tân,+Gia+Nghĩa,+Đắk+Nông" target="_blank">tại đây</a>) | SĐT: 0917029376</p>
+  </footer>
+  <script>
+    const input = document.getElementById("searchInput");
+    input.addEventListener("keyup", function () {
+      const keyword = this.value.toLowerCase();
+      const regions = document.querySelectorAll(".region");
+      regions.forEach(region => {
+        const match = region.innerText.toLowerCase().includes(keyword);
+        region.style.display = match ? "block" : "none";
+      });
+      if (keyword === "") regions.forEach(r => r.style.display = "block");
+    });
+  </script>
+
+</body>
+</html>

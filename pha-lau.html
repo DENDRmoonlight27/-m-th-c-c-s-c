@@ -1,0 +1,569 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto:wght@400;700&display=swap');
+
+    :root {
+      --main-color: #5c3a1e; /* nâu đậm */
+      --highlight-color: #DA7B45;
+      --bg-color: #f8f3ef;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0.8%;
+      background-color: var(--bg-color);
+      color: #333;
+      font-size: 17px;
+	  line-height: 1.8;
+    }
+	
+
+    header {
+      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), 
+        url('https://mia.vn/media/uploads/blog-du-lich/pho-co-hoi-an-4-1722851828.jpg') 
+        no-repeat center/cover;
+      height: 220px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+    }
+
+    header h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 4.2rem;
+      margin: 0;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+    }
+	
+	.logo-img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      margin-right: 14px;
+      vertical-align: middle;
+    }
+	
+    nav {
+      background-color: var(--main-color);
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 40px;
+      flex-wrap: wrap;
+      font-size: 1.05rem;
+    }
+	
+	.logo {
+      display: none;
+    }
+
+    .links a {
+      color: white;
+      text-decoration: none;
+      margin: 0 12px;
+      font-weight: bold;
+    }
+
+    .links a:hover {
+      color: #fff9d9;
+    }
+
+    .search-box input {
+      padding: 8px 12px;
+      border: none;
+      border-radius: 4px;
+      outline: none;
+      font-size: 1rem;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+    }
+	
+	.block {
+            flex: 1; /* Các khối div có kích thước bằng nhau */
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 10px;
+            background-color: #f9f9f9;
+        }
+
+    .region {
+      background: #fff7f0;
+      border-radius: 16px;
+      border: 3px solid var(--main-color);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+      overflow: hidden;
+    }
+
+    .region h2 {
+      background-color: var(--main-color);
+      color: white;
+      padding: 16px;
+      margin: 0;
+      text-align: center;
+      font-size: 1.6rem;
+    }
+	
+	footer {
+      background-color: var(--main-color);
+      color: white;
+      padding: 22px;
+      text-align: center;
+      font-size: 1.05rem;
+    }
+	
+	footer p {
+      background-color: var(--main-color);
+      color: white;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      font-size: 1.05rem;
+    }
+	
+	   footer a {
+      color: #ffd699;
+      text-decoration: underline;
+    }
+
+@media (max-width: 768px) {
+      .container {
+        grid-template-columns: 1fr;
+      }
+
+      .logo {
+        justify-content: center;
+        margin-bottom: 10px;
+      }
+
+      .region ul {
+        flex-direction: row;
+      }
+
+      li {
+        min-width: 80%;
+      }
+    }
+
+
+
+        header {
+            position: relative;
+            height: 200px; /* Tăng chiều cao để làm nổi bật hơn */
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), 
+                        url('https://hocmonviet.edu.vn/wp-content/uploads/2017/03/hoc-mon-viet-kham-pha-am-thuc-viet-vietnamese-cooking-1-818x390.jpg') 
+                        no-repeat center center/cover;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        header h1 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 4rem; /* Tăng kích thước chữ */
+            color: #fff;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7); /* Hiệu ứng bóng chữ */
+            z-index: 2;
+            text-align: center;
+        }
+
+h1 {
+  color: #D2691E;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 50em;
+  font-family: 'Palatino Linotype', serif;
+}
+
+h2 {
+  color: var(--main-color);
+  margin-top: 30px;
+  font-size: 4em;
+  font-family: 'Palatino Linotype', serif;
+}
+
+img.center {
+  display: block;
+  margin: 20px auto;
+  border-radius: 10px;
+  max-width: 100%;
+}
+
+p {
+  font-size: 25px;
+  color: #333333;
+  text-align: justify;
+  margin: 15px 0;
+  font-family: 'Palatino Linotype', serif;
+  text-indent: 5%;
+}
+
+table {
+  width: 100%;
+  margin-top: 20px;
+  border-spacing: 15px;
+  text-align: center
+}
+
+td {
+  vertical-align: top;
+  text-align: justify;
+  padding: 10px;
+}
+
+iframe {
+  display: block;
+  margin: 20px auto;
+  border: none;
+  max-width: 90%;
+  height: 450px;
+}
+
+ol {
+  margin-left: 25px;
+}
+
+ul {
+  margin-left: 25px;
+  list-style-type: disc;
+}
+
+.image-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.image-gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.large-image {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+
+.small-image {
+  width: 100%;
+  height: auto;
+}
+
+.enlarged-image {
+  width: 100%;
+  height: auto;
+  max-width: 140%;
+}
+
+/* Tăng cỡ chữ ở phần "Cách chế biến phở Hà Nội" */
+section.recipe p {
+  font-size: 20px;
+  font-family: 'Palatino Linotype', serif;
+}
+li {
+            font-size: 25px;
+			font-family: 'Palatino Linotype', serif
+        }
+
+.backToTop { position: fixed; 
+				display: none; 
+				background-color: #007BFF;  
+				border: none;  
+				border-radius: 5px; 
+				cursor: pointer;
+				background: #eee;
+
+color: #102039;
+
+bottom: 0;
+
+right: 15px;
+
+padding: 14px 15px;
+
+line-height: 1;
+
+display: none;
+				}
+
+       
+        }
+        .comment-section {
+            width: 50%;
+            margin: 20px auto;
+        }
+        .comment-box {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .submit-btn {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .submit-btn:hover {
+            background-color: #0056b3;
+        }
+        .comments-list {
+            margin-top: 20px;
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .comment-item {
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0;
+        }
+        .comment-item:last-child {
+            border-bottom: none;
+        }
+		
+		
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+		button {
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+		
+		.block1 {
+            flex: 1; /* Các khối div có kích thước bằng nhau */
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 150px;
+            background-color: #f9f9f9;
+        }
+		
+</style>
+</head>
+<body>
+<header>
+<h1>
+     <img src="logo_circular.jpg" alt="Logo ADC" class="logo-img" width="100"></h1>
+     <h1>Phá Lấu</h1>
+</header>
+<nav>
+    <div class="links">
+      <a href="trangchu.html">Trang chủ</a>
+      <a href="gioithieu.html">Giới thiệu</a>
+      <a href="sanpham.html">Sản phẩm</a>
+      <a href="chinhsach.html">Chính sách</a>
+      <a href="lienhe.html">Liên hệ</a>
+      <a href="dangki.html" >Đăng ký</a>
+      <a href="dangnhap.html" >Đăng nhập</a>
+    </div>
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="Tìm món ăn...">
+    </div>
+  </nav>	
+<center><h2>Phá Lấu</h2></center>
+<ul>
+<img src="https://media.urbanistnetwork.com/saigoneer/article-images/2024/06/13/phalau0.webp" alt="Phở" class="center">
+<li>Phá lấu là một món ăn nổi tiếng trong ẩm thực đường phố Việt Nam, đặc biệt phổ biến ở các khu vực miền Nam, đặc biệt là TP. Hồ Chí Minh. Món ăn này được biết đến với hương vị đậm đà, có sự kết hợp độc đáo giữa các nguyên liệu từ nội tạng động vật và các gia vị, tạo nên một món ăn vừa lạ miệng lại vừa hấp dẫn.</li>
+
+
+
+
+<center><h2>Lịch sử ra đời của Phá Lấu</h2></center>
+
+<div class="container">
+        <div class="block" id="block1">
+		<p>Phá lấu có nguồn gốc từ món ăn của người Hoa, được gọi là "phá xáo" (phá xáo là một món ăn hầm từ các bộ phận của động vật như thịt, lòng, ruột...). Phá lấu được người Hoa mang đến Việt Nam từ thế kỷ 18-19, nhưng món ăn này đã được biến tấu và hòa nhập vào ẩm thực Việt Nam, đặc biệt là trong cộng đồng người Hoa ở Chợ Lớn (TP. Hồ Chí Minh).</p>
+<p>Ban đầu, phá lấu được làm từ các phần thịt nội tạng của bò hoặc heo, hầm với gia vị để làm mềm và ngấm đều gia vị. Sau đó, món ăn này dần trở nên phổ biến và được yêu thích không chỉ bởi người Hoa mà còn cả người Việt, trở thành món ăn vặt quen thuộc và hấp dẫn tại các quán ăn vỉa hè, các khu chợ.</p>
+		
+
+		
+		</div>
+        <div class="block" id="block2">
+		<center><img src="https://dobuon.vn/wp-content/uploads/2024/08/nguon-goc-mon-pha-lau-2.jpg" alt="Lịch sử Phở" width="400"></center>
+		<center><img src="https://i.ytimg.com/vi/db_aNoLK9e4/sddefault.jpg" alt="Lịch sử Phở" width="400"></center>
+		</div>
+    </div>
+
+<center><h2>Nơi bán Phá Lấu</h2></center>
+
+<div class="container">
+        <div class="block" id="block1">
+		<p>Phá lấu có thể tìm thấy ở nhiều khu vực của TP. Hồ Chí Minh và các tỉnh miền Nam, đặc biệt là tại các khu chợ, các con hẻm hoặc các quán ăn vỉa hè. Một số địa chỉ nổi tiếng mà bạn có thể thưởng thức phá lấu là:</p>
+<ol>
+<li>Phá Lấu Chợ Lớn (TP. Hồ Chí Minh): Đây là một trong những địa điểm nổi tiếng với món phá lấu, đặc biệt là phá lấu bò.</li>
+<li>Phá Lấu Nguyễn Thái Học (Quận 1, TP. Hồ Chí Minh): Quán này được biết đến với món phá lấu thơm ngon, nước dùng đậm đà.</li>
+<li>Phá Lấu Bà Mười (Quận 5, TP. Hồ Chí Minh): Đây là một quán phá lấu nổi tiếng, với hương vị phá lấu đặc trưng và được nhiều thực khách yêu thích.</li>
+</ol>
+<p>Bên cạnh đó, bạn cũng có thể tìm thấy phá lấu tại các khu chợ đêm, các khu vực ăn uống đường phố hoặc các quán ăn nhỏ ở Sài Gòn và các tỉnh miền Nam.</p>
+	</td>
+		
+		
+		</div>
+        <div class="block" id="block2">
+		<center><img src="https://cafebiz.cafebizcdn.vn/zoom/700_438/162123310254002176/2024/4/1/avatar1711959095853-1711959097195193805176.png" alt="Nơi bán Phở" width="500"><center></div>
+    </div>
+
+<center><h2>Cách chế biến Phá Lấu</h2></center>
+<section class="recipe">
+<iframe width="700" height="315" src="https://www.youtube.com/embed/8y1jXBljFeY?si=y7chx2wOW7GeSRnZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<li>Phá lấu là món ăn được chế biến từ những nguyên liệu chính là các bộ phận nội tạng của động vật, chủ yếu là bò hoặc heo. Món ăn này có cách chế biến cầu kỳ, nhưng nếu làm đúng, sẽ mang lại hương vị rất đặc trưng và hấp dẫn.</li>
+
+
+<tr>
+<td>
+<ol>
+<li><b>Chuẩn bị nguyên liệu:</b>
+
+<div class="container">
+        <div class="block" id="block1">
+	<ul>	
+<li>Nội tạng động vật: Các bộ phận như lòng, ruột, phèo, gan, dạ dày của bò hoặc heo, được làm sạch và cắt nhỏ.</li>
+<li>Gia vị: Các gia vị chính như nước mắm, tiêu, tỏi, sả, gừng, ớt, hành, đường, nước dừa và một số gia vị đặc biệt khác.</li>
+<li>Hạt tiêu, gạo rang: Để tạo thêm hương vị thơm ngon cho nước dùng.</li>
+<li>Thịt xíu mại (tùy món): Một số quán có thể thêm thịt xíu mại vào phá lấu để tăng hương vị.</li>
+
+
+</ul>
+</div>
+        <div class="block" id="block2"><center><img src="https://dobuon.vn/wp-content/uploads/2024/08/nguon-goc-mon-pha-lau-4.jpg" alt="Nguyên liệu" class="small-image"></center></div>
+    </div>
+</li>
+
+<li><b>Chế biến Phá Lấu:</b>
+
+<div class="container">
+        <div class="block" id="block1"><ul>
+<li>Làm sạch nội tạng: Các bộ phận nội tạng động vật được làm sạch cẩn thận để đảm bảo an toàn vệ sinh và loại bỏ mùi hôi.</li>
+<li>Xào gia vị: Tỏi, sả và hành được băm nhỏ, xào thơm với dầu ăn. Sau đó, cho các gia vị như tiêu, đường vào xào chung để tạo mùi thơm đặc trưng.</li>
+<li>Hầm nội tạng: Các bộ phận nội tạng được cho vào nồi, thêm nước dừa và nước dùng, rồi hầm trong nhiều giờ cho đến khi mềm và thấm gia vị.</li>
+<li>Thêm gia vị: Khi nồi phá lấu gần xong, gia vị như nước mắm, gừng, tiêu và một số gia vị khác sẽ được thêm vào để làm tăng hương vị cho nước dùng.</li>
+<li>Hoàn thiện: Phá lấu được vớt ra, cắt thành từng miếng vừa ăn và thường được ăn kèm với bánh mì, bún, hoặc cơm trắng.</li>
+
+
+</ul></div>
+        <div class="block" id="block2"><center><img src="https://kenh14cdn.com/2017/11-1512019451709.jpg" alt="Chế biến phở" width="500" height="400"></center></div>
+    </div>
+
+</li>
+<li><b>Cách thưởng thức:</b>
+
+<div class="container">
+        <div class="block" id="block1"><ul>
+<li>Phá lấu thường được ăn kèm với bánh mì. Bánh mì được xé ra, chấm vào nước dùng hoặc nhúng vào phá lấu, tạo nên sự hòa quyện giữa vị mềm của bánh mì và vị đậm đà của nước dùng.</li>
+<li>Ngoài ra, phá lấu cũng có thể được ăn cùng bún, cơm trắng hoặc đơn giản là ăn kèm với rau sống, dưa leo.</li>
+<li>Nước dùng của phá lấu có thể chua, ngọt, cay tùy vào khẩu vị và gia vị pha chế.</li>
+
+
+</ul></div>
+        <div class="block" id="block2"><center><image src="https://kenh14cdn.com/2017/9-1512019451707.jpg" alt="Phở" height="300" width="500"></div>
+    </div>
+
+
+
+</li>
+</ol>
+</td>
+</tr>
+</section>
+<li>Phá lấu là một món ăn đậm đà và đầy đủ hương vị, mang đậm ảnh hưởng của văn hóa ẩm thực Trung Hoa, nhưng đã được người Việt Nam sáng tạo và biến tấu theo cách riêng. Món ăn này không chỉ là một phần không thể thiếu trong ẩm thực đường phố TP. Hồ Chí Minh mà còn là một phần trong bức tranh đa dạng của ẩm thực Việt Nam.</li>
+
+</ul>
+<br>
+<br>
+<button id="backToTop" onclick="scrollToTop()">Back to Top</button> <!-- JavaScript cho nút Back to Top --> 
+<script> // Hiển thị nút khi cuộn xuống 100px từ đầu trang 
+window.onscroll = function() {
+ var backToTopButton = document.getElementById("backToTop"); 
+ if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) { 
+ backToTopButton.style.display = "block"; } else { 
+ backToTopButton.style.display = "none"; } }; // Hàm cuộn lên đầu trang 
+ function scrollToTop() { 
+		document.body.scrollTop = 0; 
+		document.documentElement.scrollTop = 0; 
+		} 
+</script>
+
+<div class="comment-section">
+        <h2>Phần Bình Luận</h2>
+        <textarea id="commentBox" class="comment-box" placeholder="Nhập bình luận của bạn..."></textarea>
+        <button id="submitBtn" class="submit-btn">Gửi</button>
+        <div class="comments-list" id="commentsList">
+            <h3>Bình luận:</h3>
+        </div>
+    </div>
+
+    <script>
+        const commentBox = document.getElementById('commentBox');
+        const submitBtn = document.getElementById('submitBtn');
+        const commentsList = document.getElementById('commentsList');
+
+        // Thêm bình luận mới vào danh sách
+        submitBtn.addEventListener('click', () => {
+            const comment = commentBox.value.trim(); // Loại bỏ khoảng trắng thừa
+            if (comment) {
+                const newComment = document.createElement('div');
+                newComment.className = 'comment-item';
+                newComment.textContent = comment;
+                commentsList.appendChild(newComment); // Thêm bình luận vào danh sách
+                commentBox.value = ''; // Xóa nội dung trong ô nhập
+            } else {
+                alert('Vui lòng nhập bình luận trước khi gửi!');
+            }
+        });
+    </script>
+<footer>
+    <p>&copy; Ẩm Thực Đặc Sắc | Email: amthucdacsac2025@gmail.com</p>
+    <p>Fanpage: facebook.com/newfanpage</p>
+    <p>Địa chỉ: 08 Lê Duẩn - P. Nghĩa Tân - TP. Gia Nghĩa - Tỉnh Đăk Nông (<a href="https://www.google.com/maps?q=08+Lê+Duẩn,+P.+Nghĩa+Tân,+Gia+Nghĩa,+Đắk+Nông" target="_blank">tại đây</a>) | SĐT: 0917029376</p>
+  </footer>
+  <script>
+    const input = document.getElementById("searchInput");
+    input.addEventListener("keyup", function () {
+      const keyword = this.value.toLowerCase();
+      const regions = document.querySelectorAll(".region");
+      regions.forEach(region => {
+        const match = region.innerText.toLowerCase().includes(keyword);
+        region.style.display = match ? "block" : "none";
+      });
+      if (keyword === "") regions.forEach(r => r.style.display = "block");
+    });
+  </script>
+
+</body>
+</html>

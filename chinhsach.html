@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ẩm Thực Đặc Sắc</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto:wght@400;700&display=swap');
+
+    :root {
+      --main-color: #5c3a1e; /* nâu đậm */
+      --highlight-color: #DA7B45;
+      --bg-color: #f8f3ef;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: var(--bg-color);
+      color: #333;
+      font-size: 17px;
+    }
+
+    header {
+      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), 
+        url('https://mia.vn/media/uploads/blog-du-lich/pho-co-hoi-an-4-1722851828.jpg') 
+        no-repeat center/cover;
+      height: 220px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+    }
+
+    header h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 4.2rem;
+      margin: 0;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    .logo-img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      margin-right: 14px;
+      vertical-align: middle;
+    }
+
+    nav {
+      background-color: var(--main-color);
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 40px;
+      flex-wrap: wrap;
+      font-size: 1.05rem;
+    }
+
+    .links a {
+      color: white;
+      text-decoration: none;
+      margin: 0 12px;
+      font-weight: bold;
+    }
+
+    .links a:hover {
+      color: #fff9d9;
+    }
+
+    .search-box input {
+      padding: 8px 12px;
+      border: none;
+      border-radius: 4px;
+      outline: none;
+      font-size: 1rem;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+    }
+
+    .region {
+      background: #fff7f0;
+      border-radius: 16px;
+      border: 3px solid var(--main-color);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+      overflow: hidden;
+    }
+
+    .region h2 {
+      background-color: var(--main-color);
+      color: white;
+      padding: 16px;
+      margin: 0;
+      text-align: center;
+      font-size: 1.6rem;
+    }
+
+    .region ul {
+      list-style: none;
+      padding: 20px;
+      margin: 0;
+      display: flex;
+      flex-wrap: nowrap;
+      gap: 20px;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+    }
+
+    .region ul::-webkit-scrollbar {
+      height: 8px;
+    }
+    .region ul::-webkit-scrollbar-thumb {
+      background-color: #8B5E3C;
+      border-radius: 10px;
+    }
+    .region ul::-webkit-scrollbar-track {
+      background-color: #f5e9dc;
+    }
+
+    
+
+    li:hover {
+      transform: translateY(-6px);
+    }
+
+    li img {
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+      border-bottom: 2px solid #eee;
+    }
+
+    li p {
+      text-align: center;
+      margin: 10px 0;
+      font-weight: 600;
+      font-size: 1.1rem;
+      color: var(--main-color);
+    }
+
+    footer {
+      background-color: var(--main-color);
+      color: white;
+      padding: 22px;
+      text-align: center;
+      font-size: 1.05rem;
+    }
+
+    footer a {
+      color: #ffd699;
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        grid-template-columns: 1fr;
+      }
+
+      .region ul {
+        flex-direction: row;
+      }
+
+      li {
+        min-width: 80%;
+      }
+    }
+	
+		.block1 {
+            flex: 1; /* Các khối div có kích thước bằng nhau */
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 200px;
+            background-color: #f9f9f9;
+        }
+	
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>
+     <img src="logo_circular.jpg" alt="Logo ADC" class="logo-img">
+      Ẩm Thực Đặc Sắc
+    </h1>
+  </header>
+
+  <nav>
+    <div class="links">
+      <a href="trangchu.html">Trang chủ</a>
+      <a href="gioithieu.html">Giới thiệu</a>
+      <a href="sanpham.html">Sản phẩm</a>
+      <a href="chinhsach.html">Chính sách</a>
+      <a href="lienhe.html">Liên hệ</a>
+      <a href="dangki.html" >Đăng ký</a>
+      <a href="dangnhap.html" >Đăng nhập</a>
+    </div>
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="Tìm món ăn...">
+    </div>
+  </nav>
+  
+  <div class="block1">
+  
+  <h2>1. Quyền và Trách Nhiệm của Khách Hàng</h2>
+        <ul>
+            <li><strong>Quyền:</strong> Khách hàng có quyền truy cập và sử dụng nội dung trên blog nhằm mục đích cá nhân hoặc học tập. Chúng tôi yêu cầu ghi rõ nguồn khi sử dụng nội dung từ blog.</li>
+            <li><strong>Trách nhiệm:</strong> Tôn trọng các quy định về bản quyền và bình luận văn minh trên blog.</li>
+        </ul>
+
+        <h2>2. Chính Sách Bảo Mật</h2>
+        <p>Chúng tôi cam kết bảo mật thông tin cá nhân của khách hàng và không chia sẻ với bên thứ ba.</p>
+
+        <h2>3. Về Nội Dung và Bản Quyền</h2>
+        <p>Tất cả nội dung trên blog thuộc quyền sở hữu của chúng tôi (trừ trường hợp ghi rõ nguồn khác).</p>
+
+        <h2>4. Chính Sách Về Bình Luận</h2>
+        <ul>
+            <li>Khách hàng được khuyến khích chia sẻ ý kiến nhưng phải đảm bảo nội dung phù hợp và không gây tranh cãi.</li>
+            <li>Chúng tôi có quyền xoá hoặc sửa đổi các bình luận không phù hợp.</li>
+        </ul>
+
+        <h2>5. Các Điều Khoản Khác</h2>
+        <p>Chính sách có thể thay đổi mà không cần thông báo trước để phù hợp với nhu cầu phát triển và yêu cầu pháp lý.</p>
+  
+  </div>
+  
+  <footer>
+    <p>&copy; Ẩm Thực Đặc Sắc | Email: amthucdacsac2025@gmail.com</p>
+    <p>Fanpage: facebook.com/newfanpage</p>
+    <p>Địa chỉ: 08 Lê Duẩn - P. Nghĩa Tân - TP. Gia Nghĩa - Tỉnh Đăk Nông (<a href="https://www.google.com/maps?q=08+Lê+Duẩn,+P.+Nghĩa+Tân,+Gia+Nghĩa,+Đắk+Nông" target="_blank">tại đây</a>) | SĐT: 0917029376</p>
+  </footer>
+
+  <script>
+    const input = document.getElementById("searchInput");
+    input.addEventListener("keyup", function () {
+      const keyword = this.value.toLowerCase();
+      const regions = document.querySelectorAll(".region");
+      regions.forEach(region => {
+        const match = region.innerText.toLowerCase().includes(keyword);
+        region.style.display = match ? "block" : "none";
+      });
+      if (keyword === "") regions.forEach(r => r.style.display = "block");
+    });
+  </script>
+
+</body>
+</html>

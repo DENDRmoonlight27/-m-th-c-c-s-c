@@ -1,0 +1,567 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto:wght@400;700&display=swap');
+
+    :root {
+      --main-color: #5c3a1e; /* nâu đậm */
+      --highlight-color: #DA7B45;
+      --bg-color: #f8f3ef;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0.8%;
+      background-color: var(--bg-color);
+      color: #333;
+      font-size: 17px;
+	  line-height: 1.8;
+    }
+	
+
+    header {
+      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), 
+        url('https://mia.vn/media/uploads/blog-du-lich/pho-co-hoi-an-4-1722851828.jpg') 
+        no-repeat center/cover;
+      height: 220px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+    }
+
+    header h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 4.2rem;
+      margin: 0;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+    }
+	
+	.logo-img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      margin-right: 14px;
+      vertical-align: middle;
+    }
+	
+    nav {
+      background-color: var(--main-color);
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 40px;
+      flex-wrap: wrap;
+      font-size: 1.05rem;
+    }
+	
+	.logo {
+      display: none;
+    }
+
+    .links a {
+      color: white;
+      text-decoration: none;
+      margin: 0 12px;
+      font-weight: bold;
+    }
+
+    .links a:hover {
+      color: #fff9d9;
+    }
+
+    .search-box input {
+      padding: 8px 12px;
+      border: none;
+      border-radius: 4px;
+      outline: none;
+      font-size: 1rem;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+    }
+	
+	.block {
+            flex: 1; /* Các khối div có kích thước bằng nhau */
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 10px;
+            background-color: #f9f9f9;
+        }
+
+    .region {
+      background: #fff7f0;
+      border-radius: 16px;
+      border: 3px solid var(--main-color);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+      overflow: hidden;
+    }
+
+    .region h2 {
+      background-color: var(--main-color);
+      color: white;
+      padding: 16px;
+      margin: 0;
+      text-align: center;
+      font-size: 1.6rem;
+    }
+	
+	footer {
+      background-color: var(--main-color);
+      color: white;
+      padding: 22px;
+      text-align: center;
+      font-size: 1.05rem;
+    }
+	
+	footer p {
+      background-color: var(--main-color);
+      color: white;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      font-size: 1.05rem;
+    }
+	
+	   footer a {
+      color: #ffd699;
+      text-decoration: underline;
+    }
+
+@media (max-width: 768px) {
+      .container {
+        grid-template-columns: 1fr;
+      }
+
+      .logo {
+        justify-content: center;
+        margin-bottom: 10px;
+      }
+
+      .region ul {
+        flex-direction: row;
+      }
+
+      li {
+        min-width: 80%;
+      }
+    }
+
+
+
+        header {
+            position: relative;
+            height: 200px; /* Tăng chiều cao để làm nổi bật hơn */
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), 
+                        url('https://hocmonviet.edu.vn/wp-content/uploads/2017/03/hoc-mon-viet-kham-pha-am-thuc-viet-vietnamese-cooking-1-818x390.jpg') 
+                        no-repeat center center/cover;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        header h1 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 4rem; /* Tăng kích thước chữ */
+            color: #fff;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7); /* Hiệu ứng bóng chữ */
+            z-index: 2;
+            text-align: center;
+        }
+
+h1 {
+  color: #D2691E;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 50em;
+  font-family: 'Palatino Linotype', serif;
+}
+
+h2 {
+  color: var(--main-color);
+  margin-top: 30px;
+  font-size: 4em;
+  font-family: 'Palatino Linotype', serif;
+}
+
+img.center {
+  display: block;
+  margin: 20px auto;
+  border-radius: 10px;
+  max-width: 100%;
+}
+
+p {
+  font-size: 25px;
+  color: #333333;
+  text-align: justify;
+  margin: 15px 0;
+  font-family: 'Palatino Linotype', serif;
+  text-indent: 5%;
+}
+
+table {
+  width: 100%;
+  margin-top: 20px;
+  border-spacing: 15px;
+  text-align: center
+}
+
+td {
+  vertical-align: top;
+  text-align: justify;
+  padding: 10px;
+}
+
+iframe {
+  display: block;
+  margin: 20px auto;
+  border: none;
+  max-width: 90%;
+  height: 450px;
+}
+
+ol {
+  margin-left: 25px;
+}
+
+ul {
+  margin-left: 25px;
+  list-style-type: disc;
+}
+
+.image-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.image-gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.large-image {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+
+.small-image {
+  width: 100%;
+  height: auto;
+}
+
+.enlarged-image {
+  width: 100%;
+  height: auto;
+  max-width: 140%;
+}
+
+/* Tăng cỡ chữ ở phần "Cách chế biến phở Hà Nội" */
+section.recipe p {
+  font-size: 20px;
+  font-family: 'Palatino Linotype', serif;
+}
+li {
+            font-size: 25px;
+			font-family: 'Palatino Linotype', serif
+        }
+
+.backToTop { position: fixed; 
+				display: none; 
+				background-color: #007BFF;  
+				border: none;  
+				border-radius: 5px; 
+				cursor: pointer;
+				background: #eee;
+
+color: #102039;
+
+bottom: 0;
+
+right: 15px;
+
+padding: 14px 15px;
+
+line-height: 1;
+
+display: none;
+				}
+
+       
+      
+        .comment-section {
+            width: 50%;
+            margin: 20px auto;
+        }
+        .comment-box {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .submit-btn {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .submit-btn:hover {
+            background-color: #0056b3;
+        }
+        .comments-list {
+            margin-top: 20px;
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .comment-item {
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0;
+        }
+        .comment-item:last-child {
+            border-bottom: none;
+        }
+		
+		
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+		button {
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+		
+		.block1 {
+            flex: 1; /* Các khối div có kích thước bằng nhau */
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 150px;
+            background-color: #f9f9f9;
+        }
+		
+</style>
+</head>
+<body>
+<header>
+<h1>
+     <img src="logo_circular.jpg" alt="Logo ADC" class="logo-img" width="100"></h1>
+     <h1>Cao Lầu Hội An</h1>
+</header>
+<nav>
+    <div class="links">
+      <a href="trangchu.html">Trang chủ</a>
+      <a href="gioithieu.html">Giới thiệu</a>
+      <a href="sanpham.html">Sản phẩm</a>
+      <a href="chinhsach.html">Chính sách</a>
+      <a href="lienhe.html">Liên hệ</a>
+      <a href="dangki.html" >Đăng ký</a>
+      <a href="dangnhap.html" >Đăng nhập</a>
+    </div>
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="Tìm món ăn...">
+    </div>
+  </nav>	
+<center><h2>Cao Lầu Hội An</h2></center>
+<ul>
+<img src="https://culaochamtour.com/wp-content/uploads/2021/11/cao-lau-hoi-an-quang-nam.jpg" alt="Phở" class="center">
+<li>Cao Lầu là một món ăn đặc sản nổi tiếng của Hội An, Quảng Nam, được biết đến với hương vị độc đáo và cách chế biến công phu. Món ăn này đã trở thành một phần không thể thiếu trong nền ẩm thực của miền Trung và là điểm đến yêu thích của du khách khi đến Hội An.</li>
+
+
+
+<center><h2>Lịch sử ra đời của Cao Lầu Hội An</h2></center>
+
+<div class="container">
+        <div class="block" id="block1">
+		<p>Cao Lầu có nguồn gốc từ Hội An, nhưng không rõ chính xác thời gian ra đời. Một số giả thuyết cho rằng món ăn này được tạo ra từ thế kỷ 17, khi Hội An là một cảng thương mại quốc tế, thu hút nhiều thương nhân từ Trung Quốc, Nhật Bản, và các quốc gia khác đến giao thương. Món ăn này có thể đã được ảnh hưởng từ các món mì sợi của Trung Quốc và Nhật Bản, nhưng được người dân địa phương biến tấu và phát triển theo phong cách riêng.</p>
+<p>Một số nguồn tin còn cho rằng, món Cao Lầu bắt nguồn từ món mì "lầu" của Trung Quốc, được người dân Hội An sáng tạo và cải tiến để phù hợp với khẩu vị và nguyên liệu địa phương. Điều đặc biệt của Cao Lầu là sử dụng nước giếng Bá Lễ, một giếng nổi tiếng ở Hội An, được cho là nguồn nước đặc biệt giúp làm nên sự khác biệt trong món ăn này.</p>
+
+		
+		</div>
+        <div class="block" id="block2">
+		<center><img src="https://i-giadinh.vnecdn.net/2023/03/13/Buoc-7-Thanh-pham-1-7-9577-1678700377.jpg" alt="Lịch sử Phở" width="400"></center>
+		<center><img src="https://cdn.zekkei-japan.jp/images/articles/df5fedbcdc73130313fe7576611fa240.jpg" alt="Lịch sử Phở" width="400"></center>
+		</div>
+    </div>
+
+<center><h2>Nơi bán Cao Lầu Hội An</h2></center>
+
+<div class="container">
+        <div class="block" id="block1">
+		<p>Cao Lầu là món ăn nổi tiếng, dễ dàng tìm thấy ở nhiều quán ăn và nhà hàng tại Hội An. Một số địa chỉ nổi bật mà du khách có thể thử khi đến Hội An là:</p>
+<ol>
+<li>Cao Lầu Thanh (132 Trần Phú, Hội An): Là một trong những quán nổi tiếng, nơi phục vụ Cao Lầu ngon với sợi mì mềm, nước dùng đậm đà và các nguyên liệu tươi ngon.</li>
+<li>Cao Lầu Hương Lan (26 Thái Phiên, Hội An): Quán này rất được yêu thích bởi hương vị đậm đà và không gian ấm cúng. Món Cao Lầu ở đây có đầy đủ các nguyên liệu đặc trưng như thịt heo, rau sống và bánh tráng.</li>
+<li>Quán Cao Lầu Liên (Nguyễn Duy Hiệu, Hội An): Đây là một địa chỉ nổi tiếng mà người dân địa phương và du khách hay ghé thăm để thưởng thức Cao Lầu chuẩn vị Hội An.</li>
+</ol>
+<p>Ngoài các quán ăn truyền thống, món Cao Lầu cũng có mặt tại nhiều nhà hàng, quán ăn dọc các tuyến phố cổ Hội An, tạo điều kiện cho du khách dễ dàng thưởng thức món ăn đặc sản này.</p></td>
+		
+		
+		</div>
+        <div class="block" id="block2">
+		<center><img src="https://images2.thanhnien.vn/528068263637045248/2024/5/31/sach-hay-17171477803491256152598.jpg" alt="Nơi bán Phở" width="500"><center></div>
+    </div>
+
+<center><h2>Cách chế biến Cao Lầu Hội An</h2></center>
+<section class="recipe">
+<iframe width="700" src="https://www.youtube.com/embed/Fmebc_dqPnM?si=qfyrr8bj36joIdtX" title="YouTube video player" allowfullscreen></iframe>
+
+
+<li>Cao Lầu có cách chế biến khá cầu kỳ và đặc biệt, mang đến một món ăn thơm ngon với hương vị hòa quyện giữa các nguyên liệu tươi ngon. Dưới đây là cách chế biến cơ bản của món Cao Lầu:</li>
+
+<tr>
+<td>
+<ol>
+<li><b>Chuẩn bị nguyên liệu:</b>
+
+<div class="container">
+        <div class="block" id="block1">
+	<ul>	
+<li>Mì Cao Lầu: Mì được làm từ bột gạo, nhưng có sự khác biệt so với các loại mì khác nhờ vào công thức đặc biệt, cùng với việc sử dụng nước giếng Bá Lễ. Mì Cao Lầu có màu vàng, độ dai vừa phải, không mềm như mì thông thường.</li>
+<li>Thịt heo: Thịt heo thường được chọn là thịt ba chỉ hoặc thịt nạc, thái lát mỏng và chế biến vừa vặn.</li>
+<li>Bánh tráng: Bánh tráng nướng giòn, cắt thành miếng nhỏ để rải lên trên tô Cao Lầu, giúp tạo thêm sự giòn và vị thơm cho món ăn.</li>
+<li>Rau sống: Bao gồm các loại rau như giá đỗ, rau húng quế, xà lách, rau mùi để ăn kèm.</li>
+<li>Nước dùng: Nước dùng của Cao Lầu thường được làm từ nước hầm xương, nêm nếm gia vị để có một vị ngọt thanh nhẹ nhàng và đậm đà.</li>
+
+</ul>
+</div>
+        <div class="block" id="block2"><center><img src="https://cdn.tgdd.vn/Files/2022/05/13/1432153/cao-lau-hoi-an-thom-ngon-dam-da-huong-vi-quang-202205131030245206.jpg" alt="Nguyên liệu" class="small-image"></center></div>
+    </div>
+</li>
+
+<li><b>Chế biến Cao Lầu Hội An:</b>
+
+<div class="container">
+        <div class="block" id="block1"><ul>
+<li>Mì Cao Lầu: Sợi mì Cao Lầu được làm từ bột gạo, sau khi được tráng sơ qua nước sôi sẽ có độ dai đặc trưng, không giống như các loại mì thông thường. Sau khi mì chín, cho vào tô và để riêng.</li>
+<li>Thịt heo: Thịt heo được thái mỏng, sau đó ướp gia vị và chiên hoặc xào sơ cho thấm gia vị. Thịt thường được xếp lên trên tô Cao Lầu.</li>
+<li>Nước dùng: Nước dùng được nấu từ xương heo, sau đó lọc qua để nước dùng trong và ngọt. Gia vị nêm nếm thêm như tiêu, hành, tỏi để tạo sự đậm đà.</li>
+<li>Trình bày: Mì được cho vào tô, thịt heo xếp lên trên, rồi cho nước dùng vào. Cuối cùng, thêm rau sống và bánh tráng nướng giòn lên trên tô.</li>
+
+
+</ul></div>
+        <div class="block" id="block2"><center><img src="https://static2.abay.vn/Images/2022/06/30/cao-lau-hoi-an.jpg" alt="Chế biến phở" width="500" height="400"></center></div>
+    </div>
+
+</li>
+<li><b>Cách thưởng thức:</b>
+
+<div class="container">
+        <div class="block" id="block1"><ul>
+<li>Cao Lầu được ăn kèm với nước dùng nóng, rau sống tươi ngon và bánh tráng giòn. Món ăn này thường không có quá nhiều nước dùng như các món mì khác mà thường được để ở dạng khô, đậm đà, với các nguyên liệu hòa quyện vào nhau.</li>
+<li>Khi ăn, bạn có thể trộn đều các nguyên liệu với nhau để cảm nhận hương vị đậm đà của mì, thịt heo, rau sống và gia vị.</li>
+
+</ul></div>
+        <div class="block" id="block2"><center><image src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzs-KsZUdWd1182kvUHE_jThxamw5yT873nQ&s" alt="Phở" height="300" width="500"></div>
+    </div>
+
+
+
+</li>
+</ol>
+</td>
+</tr>
+</section>
+<li>Điểm đặc biệt của Cao Lầu chính là sợi mì độc đáo, được làm từ bột gạo pha trộn với nước giếng Bá Lễ, tạo ra độ dai và hương vị khác biệt. Sự kết hợp hoàn hảo giữa thịt heo, rau sống, bánh tráng nướng và nước dùng thanh nhẹ tạo nên một món ăn có hương vị đặc trưng, mang đậm dấu ấn văn hóa ẩm thực Hội An.</li>
+<li>Món Cao Lầu không chỉ đơn thuần là một món ăn mà còn là một phần của lịch sử và văn hóa Hội An, phản ánh sự giao thoa văn hóa giữa các dân tộc và thời kỳ lịch sử. Món ăn này đã trở thành một biểu tượng ẩm thực của thành phố cổ, thu hút du khách trong và ngoài nước đến thưởng thức.</li>
+</ul>
+<br>
+<br>
+<button id="backToTop" onclick="scrollToTop()">Back to Top</button> <!-- JavaScript cho nút Back to Top --> 
+<script> // Hiển thị nút khi cuộn xuống 100px từ đầu trang 
+window.onscroll = function() {
+ var backToTopButton = document.getElementById("backToTop"); 
+ if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) { 
+ backToTopButton.style.display = "block"; } else { 
+ backToTopButton.style.display = "none"; } }; // Hàm cuộn lên đầu trang 
+ function scrollToTop() { 
+		document.body.scrollTop = 0; 
+		document.documentElement.scrollTop = 0; 
+		} 
+</script>
+
+<div class="comment-section">
+        <h2>Phần Bình Luận</h2>
+        <textarea id="commentBox" class="comment-box" placeholder="Nhập bình luận của bạn..."></textarea>
+        <button id="submitBtn" class="submit-btn">Gửi</button>
+        <div class="comments-list" id="commentsList">
+            <h3>Bình luận:</h3>
+        </div>
+    </div>
+
+    <script>
+        const commentBox = document.getElementById('commentBox');
+        const submitBtn = document.getElementById('submitBtn');
+        const commentsList = document.getElementById('commentsList');
+
+        // Thêm bình luận mới vào danh sách
+        submitBtn.addEventListener('click', () => {
+            const comment = commentBox.value.trim(); // Loại bỏ khoảng trắng thừa
+            if (comment) {
+                const newComment = document.createElement('div');
+                newComment.className = 'comment-item';
+                newComment.textContent = comment;
+                commentsList.appendChild(newComment); // Thêm bình luận vào danh sách
+                commentBox.value = ''; // Xóa nội dung trong ô nhập
+            } else {
+                alert('Vui lòng nhập bình luận trước khi gửi!');
+            }
+        });
+    </script>
+<footer>
+    <p>&copy; Ẩm Thực Đặc Sắc | Email: amthucdacsac2025@gmail.com</p>
+    <p>Fanpage: facebook.com/newfanpage</p>
+    <p>Địa chỉ: 08 Lê Duẩn - P. Nghĩa Tân - TP. Gia Nghĩa - Tỉnh Đăk Nông (<a href="https://www.google.com/maps?q=08+Lê+Duẩn,+P.+Nghĩa+Tân,+Gia+Nghĩa,+Đắk+Nông" target="_blank">tại đây</a>) | SĐT: 0917029376</p>
+  </footer>
+  <script>
+    const input = document.getElementById("searchInput");
+    input.addEventListener("keyup", function () {
+      const keyword = this.value.toLowerCase();
+      const regions = document.querySelectorAll(".region");
+      regions.forEach(region => {
+        const match = region.innerText.toLowerCase().includes(keyword);
+        region.style.display = match ? "block" : "none";
+      });
+      if (keyword === "") regions.forEach(r => r.style.display = "block");
+    });
+  </script>
+
+</body>
+</html>
+
+
+
